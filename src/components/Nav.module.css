@@ -1,0 +1,49 @@
+.nav {
+  height: 50px;
+  font-size: 1.1em;
+  margin-top: 30px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  list-style: none;
+  padding: 15px 0;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.logo {
+  position: relative;
+}
+
+.logo::after {
+  content: ".";
+  font-size: 2em;
+  margin-left: 10px;
+  position: absolute;
+  top: -24px;
+}
+
+.list li {
+  margin: 0;
+}
+
+.list li {
+  cursor: pointer;
+  transition: 0.2s ease-in color;
+}
+
+.list li:hover {
+  color: lightskyblue;
+}
+
+.list li:first-child {
+  margin-right: auto;
+  font-weight: 600;
+}
+
+.number {
+  margin-left: 10px;
+}
