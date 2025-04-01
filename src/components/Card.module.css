@@ -1,0 +1,24 @@
+.cardContainer {
+  display: flex;
+  max-height: 700px;
+  flex-direction: row;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: auto;
+  margin-bottom: 70px;
+}
+
+.card {
+  width: 400px;
+  height: 450px;
+  text-align: start;
+  margin-bottom: 50px;
+}
+
+.img {
+  height: 350px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 40px;
+}

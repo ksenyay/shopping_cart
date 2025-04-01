@@ -17,7 +17,7 @@ function Main() {
         </div>
       </div>
       <div className={styles.secondSection}>
-        <img className={styles.image} src="src/assets/white_tea.png" alt="" />
+        <img className={styles.image} src="./product_7.png" alt="" />
       </div>
     </div>
   );
