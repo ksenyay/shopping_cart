@@ -1,6 +1,9 @@
 import App from "./App";
 import Main from "./components/Main";
 import Nav from "./components/Nav";
+import Card from "./components/Card";
+import ShopPage from "./components/ShopPage";
+import ProductPage from "./components/ProductPage";
 
 const routes = [
   {
@@ -14,6 +17,18 @@ const routes = [
   {
     path: "nav",
     element: <Nav />,
+  },
+  {
+    path: "card",
+    element: <Card />,
+  },
+  {
+    path: "shopPage",
+    element: <ShopPage />,
+  },
+  {
+    path: "productPage",
+    element: <ProductPage />,
   },
 ];
 

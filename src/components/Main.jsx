@@ -1,4 +1,5 @@
 import styles from "./Main.module.css";
+import { Link } from "react-router-dom";
 
 function Main() {
   return (
@@ -10,11 +11,13 @@ function Main() {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Repellendus odit sed doloribus quaerat deleniti
           </p>
-          <span className={styles.span}>SHOP NOW</span>
+          <Link className={styles.span} to="shopPage">
+            SHOP NOW
+          </Link>
         </div>
       </div>
-      <div>
-        <img className={styles.image} src="src/assets/tea.png" alt="" />
+      <div className={styles.secondSection}>
+        <img className={styles.image} src="src/assets/white_tea.png" alt="" />
       </div>
     </div>
   );
