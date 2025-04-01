@@ -13,7 +13,7 @@ function Card() {
             <img className={styles.img} src={product.url} alt="" />
             <h3>{product.name}</h3>
             <p>Weight: 50g</p>
-            <p>{product.price}</p>
+            <p className={styles.price}>{`$ ${product.price}`}</p>
           </div>
         );
       })}

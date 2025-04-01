@@ -16,6 +16,24 @@
   margin-bottom: 50px;
 }
 
+.card p {
+  margin: 5px 0;
+}
+
+.card p:last-child {
+  margin-top: 15px;
+}
+
+.card h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 1.5em;
+  color: var(--light-grey);
+}
+
 .img {
   height: 350px;
   width: 400px;

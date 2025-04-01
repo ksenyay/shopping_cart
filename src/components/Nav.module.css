@@ -36,7 +36,7 @@
 }
 
 .list li:hover {
-  color: lightskyblue;
+  color: var(--blue-accent);
 }
 
 .list li:first-child {

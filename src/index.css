@@ -11,6 +11,11 @@
   font-family: "Inter", sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --secondary-font: rgb(82, 82, 82);
+  --primary-font: rgb(47, 47, 47);
+  --pink-accent: pink;
+  --blue-accent: lightskyblue;
+  --light-grey: grey;
 }
 
 body {
@@ -20,21 +25,22 @@ body {
   min-width: 320px;
   height: 100vh;
   box-sizing: border-box;
-  color: rgb(39, 39, 39);
+  color: var(--secondary-font);
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: var(--primary-font);
 }
 
 a {
-  color: rgb(82, 82, 82);
+  color: var(--secondary-font);
   text-decoration: none;
   cursor: pointer;
   transition: 0.2s ease-in color;
 }
 
 a:hover {
-  color: lightskyblue;
+  color: var(--blue-accent);
 }
