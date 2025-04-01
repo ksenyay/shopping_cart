@@ -1,7 +1,11 @@
 //import styles from "./ProductPage.module.css";
 
 function ProductPage() {
-  return;
+  return (
+    <>
+      <h1>PRODUCTS</h1>
+    </>
+  );
 }
 
 export default ProductPage;

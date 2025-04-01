@@ -16,11 +16,13 @@ function Nav() {
           <Link to="/">home</Link>
         </li>
         <li>
-          <Link to="shopPage">shop</Link>
+          <Link to="shop">shop</Link>
         </li>
         <li>
-          <FontAwesomeIcon icon={faCartShopping} />
-          <span className={styles.number}>0</span>
+          <Link to="cart">
+            <FontAwesomeIcon icon={faCartShopping} />
+            <span className={styles.number}>0</span>
+          </Link>
         </li>
       </ul>
     </div>

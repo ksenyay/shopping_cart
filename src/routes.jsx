@@ -1,7 +1,8 @@
 import App from "./App";
 import Main from "./components/Main";
-import Nav from "./components/Nav";
+
 import Card from "./components/Card";
+import Cart from "./components/Cart";
 import ShopPage from "./components/ShopPage";
 import ProductPage from "./components/ProductPage";
 
@@ -9,26 +10,28 @@ const routes = [
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "main",
-    element: <Main />,
-  },
-  {
-    path: "nav",
-    element: <Nav />,
-  },
-  {
-    path: "card",
-    element: <Card />,
-  },
-  {
-    path: "shopPage",
-    element: <ShopPage />,
-  },
-  {
-    path: "productPage",
-    element: <ProductPage />,
+    children: [
+      {
+        index: true,
+        element: <Main />,
+      },
+      {
+        path: "card",
+        element: <Card />,
+      },
+      {
+        path: "shop",
+        element: <ShopPage />,
+      },
+      {
+        path: "product",
+        element: <ProductPage />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
+      },
+    ],
   },
 ];
 
