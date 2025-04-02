@@ -1,6 +1,7 @@
 .cardContainer {
   display: flex;
-  max-height: 700px;
+  padding: 10px 0;
+  max-height: 600px;
   flex-direction: row;
   gap: 50px;
   flex-wrap: wrap;
@@ -39,4 +40,42 @@
   width: 400px;
   object-fit: cover;
   border-radius: 40px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.img:hover {
+  transform: scale(1.03);
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttonContainer {
+  width: 120px;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 3px;
+  margin-left: auto;
+}
+
+.buttonContainer button {
+  border: none;
+  font-size: 0.8em;
+  font-weight: 600;
+  height: 50px;
+  width: 120px;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid var(--secondary-font);
+  color: var(--secondary-font);
+  transition: transform 0.3s ease-in-out, border 0.1s ease-in-out;
+}
+
+.buttonContainer button:hover {
+  transform: scale(1.05);
+  border: 1px solid var(--blue-accent);
 }

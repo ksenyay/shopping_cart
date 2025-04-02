@@ -4,14 +4,15 @@ const styles = {
   fontSize: "5.5em",
   textAlign: "start",
   marginLeft: "10px",
+  marginTop: "50px",
 };
 
 function ShopPage() {
   return (
-    <>
+    <div>
       <h1 style={styles}>PRODUCTS</h1>
       <Card />
-    </>
+    </div>
   );
 }
 
