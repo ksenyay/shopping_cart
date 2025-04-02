@@ -7,7 +7,7 @@ const styles = {
   marginTop: "50px",
 };
 
-function ShopPage() {
+function Products() {
   return (
     <div>
       <h1 style={styles}>PRODUCTS</h1>
@@ -16,4 +16,4 @@ function ShopPage() {
   );
 }
 
-export default ShopPage;
+export default Products;

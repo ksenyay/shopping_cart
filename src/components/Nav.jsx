@@ -16,7 +16,7 @@ function Nav() {
           <Link to="/">home</Link>
         </li>
         <li>
-          <Link to="shop">shop</Link>
+          <Link to="products">shop</Link>
         </li>
         <li>
           <Link to="cart">

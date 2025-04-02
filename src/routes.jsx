@@ -3,7 +3,7 @@ import Main from "./components/Main";
 
 import Card from "./components/Card";
 import Cart from "./components/Cart";
-import ShopPage from "./components/ShopPage";
+import Products from "./components/Products";
 import ProductPage from "./components/ProductPage";
 
 const routes = [
@@ -20,11 +20,11 @@ const routes = [
         element: <Card />,
       },
       {
-        path: "shop",
-        element: <ShopPage />,
+        path: "products",
+        element: <Products />,
       },
       {
-        path: "product",
+        path: "products/:productName",
         element: <ProductPage />,
       },
       {

@@ -11,7 +11,7 @@ function Main() {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Repellendus odit sed doloribus quaerat deleniti
           </p>
-          <Link className={styles.span} to="shop">
+          <Link className={styles.span} to="products">
             SHOP NOW
           </Link>
         </div>
