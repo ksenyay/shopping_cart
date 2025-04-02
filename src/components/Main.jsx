@@ -1,7 +1,20 @@
+import ImageSilder from "./ImageSlider";
 import styles from "./Main.module.css";
 import { Link } from "react-router-dom";
 
 function Main() {
+  const slides = [
+    { url: "/product_1.png" },
+    { url: "/product_2.png" },
+    { url: "/product_3.png" },
+    { url: "/product_4.png" },
+    { url: "/product_5.png" },
+    { url: "/product_6.png" },
+    { url: "/product_7.png" },
+    { url: "/product_8.png" },
+    { url: "/product_9.png" },
+  ];
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.firstSection}>
@@ -17,7 +30,7 @@ function Main() {
         </div>
       </div>
       <div className={styles.secondSection}>
-        <img className={styles.image} src="./product_7.png" alt="" />
+        <ImageSilder slides={slides} />
       </div>
     </div>
   );

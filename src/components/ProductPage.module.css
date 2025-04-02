@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 50px;
+  gap: 10px;
+}
+
+.image {
+  height: 95%;
+  width: 95%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.elementContainer {
+  width: 50%;
+  height: 700px;
+  display: flex;
+}
+
+.elementContainer:first-child {
+  align-items: center;
+  justify-content: center;
+}
+
+.elementContainer:last-child {
+  padding: 20px 10px 20px 50px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+}
+
+.elementContainer h2 {
+  font-size: 3em;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.elementContainer p {
+  text-align: start;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.button {
+  width: 300px;
+  height: 70px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: var(--secondary-font);
+  font-weight: 600;
+  margin-top: 20px;
+  border: 2px solid var(--secondary-font);
+  background-color: white;
+  transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.button:hover {
+  border: 2px solid var(--blue-accent);
+  color: var(--blue-accent);
+}
+
+.elementContainer .price {
+  font-size: 2.2em;
+  color: var(--light-grey);
+  font-weight: 300;
+}
+
+.qty {
+  margin: 20px 0 10px 0;
+}
+
+.qtyButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.qtyButton:hover {
+  transform: scale(1.1);
+}
+
+.count {
+  font-size: 1.4em;
+  padding: 0 15px;
+}
