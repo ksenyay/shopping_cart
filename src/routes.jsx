@@ -5,11 +5,13 @@ import Card from "./components/Card";
 import Cart from "./components/Cart";
 import Products from "./components/Products";
 import ProductPage from "./components/ProductPage";
+import NotFoundPage from "./components/NotFoundPage";
 
 const routes = [
   {
     path: "/",
     element: <App />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         index: true,

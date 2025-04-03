@@ -19,6 +19,7 @@ function Nav() {
 
   useEffect(() => {
     updateCartCount();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cartItems]);
 
   return (

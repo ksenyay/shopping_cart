@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import styles from "./Cart.module.css";
 import { ShopContext } from "../App";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const { cartItems, removeFromCart, incrementCount, decrementCount } =
@@ -73,6 +74,7 @@ function Cart() {
             <p className={styles.total}>
               <b>Total: </b>$ {totalPrice}
             </p>
+
             <button className={styles.checkout}>CONTINUE TO CHECKOUT</button>
           </>
         )}
