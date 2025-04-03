@@ -6,21 +6,17 @@ function Cart() {
   const { cartItems, removeFromCart, incrementCount, decrementCount } =
     useContext(ShopContext);
 
-  const [count, setCount] = useState(1);
   const [totalPrice, setTotalPrice] = useState(0);
 
   function decrement(product) {
-    console.log(product);
     if (product.quantity === 1) {
       return;
     }
     decrementCount(product);
-    setCount((prevCount) => prevCount - 1);
   }
 
   function increment(product) {
     incrementCount(product);
-    setCount((prevCount) => prevCount + 1);
   }
 
   function calculateTotal() {
