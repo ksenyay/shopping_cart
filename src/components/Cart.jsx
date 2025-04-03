@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styles from "./Cart.module.css";
 import { ShopContext } from "../App";
 
@@ -6,6 +6,7 @@ function Cart() {
   const { cartItems, removeFromCart } = useContext(ShopContext);
 
   const [count, setCount] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   function decrementCount() {
     if (count === 1) {
@@ -17,6 +18,18 @@ function Cart() {
   function incrementCount() {
     setCount((prevCount) => prevCount + 1);
   }
+
+  function calculateTotal() {
+    const total = cartItems.reduce(
+      (a, item) => a + item.price * item.quantity,
+      0
+    );
+    setTotalPrice(total);
+  }
+
+  useEffect(() => {
+    calculateTotal();
+  }, [cartItems]);
 
   return (
     <>
@@ -57,7 +70,7 @@ function Cart() {
               </div>
             ))}
             <p className={styles.total}>
-              <b>Total:</b>
+              <b>Total: </b>$ {totalPrice}
             </p>
             <button className={styles.checkout}>CONTINUE TO CHECKOUT</button>
           </>
