@@ -3,19 +3,23 @@ import styles from "./Cart.module.css";
 import { ShopContext } from "../App";
 
 function Cart() {
-  const { cartItems, removeFromCart } = useContext(ShopContext);
+  const { cartItems, removeFromCart, incrementCount, decrementCount } =
+    useContext(ShopContext);
 
   const [count, setCount] = useState(1);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  function decrementCount() {
-    if (count === 1) {
+  function decrement(product) {
+    console.log(product);
+    if (product.quantity === 1) {
       return;
     }
+    decrementCount(product);
     setCount((prevCount) => prevCount - 1);
   }
 
-  function incrementCount() {
+  function increment(product) {
+    incrementCount(product);
     setCount((prevCount) => prevCount + 1);
   }
 
@@ -29,6 +33,7 @@ function Cart() {
 
   useEffect(() => {
     calculateTotal();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cartItems]);
 
   return (
@@ -52,14 +57,14 @@ function Cart() {
                 <div className={styles.cartItemThree}>
                   <div className={styles.qty}>
                     <button
-                      onClick={() => decrementCount()}
+                      onClick={() => decrement(item)}
                       className={styles.qtyButton}
                     >
                       -
                     </button>
                     <span className={styles.count}>{item.quantity}</span>
                     <button
-                      onClick={() => incrementCount()}
+                      onClick={() => increment(item)}
                       className={styles.qtyButton}
                     >
                       +

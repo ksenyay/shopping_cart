@@ -9,6 +9,8 @@ export const ShopContext = createContext({
   cartItems: [],
   removeFromCart: () => {},
   addToCart: () => {},
+  decrementCount: () => {},
+  incrementCount: () => {},
 });
 
 function App() {
@@ -113,14 +115,38 @@ function App() {
       }
     });
   };
+
   const removeFromCart = (product) => {
-    const updatedCart = cartItems.filter((item) => item.id !== product.id); // Fix here
+    const updatedCart = cartItems.filter((item) => item.id !== product.id);
     setCartItems(updatedCart);
+  };
+
+  const incrementCount = (product) => {
+    const updatedCartItems = cartItems.map((item) =>
+      item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+    );
+
+    setCartItems(updatedCartItems);
+  };
+
+  const decrementCount = (product) => {
+    const updatedCartItems = cartItems.map((item) =>
+      item.id === product.id ? { ...item, quantity: item.quantity - 1 } : item
+    );
+
+    setCartItems(updatedCartItems);
   };
 
   return (
     <ShopContext.Provider
-      value={{ products, cartItems, addToCart, removeFromCart }}
+      value={{
+        products,
+        cartItems,
+        addToCart,
+        removeFromCart,
+        incrementCount,
+        decrementCount,
+      }}
     >
       <Nav />
       <Outlet />
