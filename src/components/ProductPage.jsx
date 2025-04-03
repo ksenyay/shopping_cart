@@ -17,7 +17,7 @@ function ProductPage() {
     setCount((prevCount) => prevCount + 1);
   }
 
-  const { products } = useContext(ShopContext);
+  const { products, addToCart } = useContext(ShopContext);
   const params = useParams();
 
   const currentProduct = products.filter(
@@ -66,7 +66,12 @@ function ProductPage() {
               +
             </button>
           </div>
-          <button className={styles.button}>ADD TO CART</button>
+          <button
+            onClick={() => addToCart(product, count)}
+            className={styles.button}
+          >
+            ADD TO CART
+          </button>
         </div>
       </div>
     </>

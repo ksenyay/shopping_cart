@@ -4,7 +4,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 function Card() {
-  const { products } = useContext(ShopContext);
+  const { products, addToCart } = useContext(ShopContext);
+
   return (
     <div className={styles.cardContainer}>
       {products.map((product) => {
@@ -28,7 +29,7 @@ function Card() {
                 <p className={styles.price}>{`$ ${product.price}`}</p>
               </div>
               <div className={styles.buttonContainer}>
-                <button>ADD TO CART</button>
+                <button onClick={() => addToCart(product)}>ADD TO CART</button>
               </div>
             </div>
           </div>

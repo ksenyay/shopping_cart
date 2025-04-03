@@ -22,38 +22,41 @@ function Cart() {
     <>
       <div className={styles.cart}>
         <h2>MY CART</h2>
-        {cartItems.length != 0 ? (
+        {cartItems.length === 0 ? (
           <p>The cart is empty</p>
         ) : (
           <>
-            <div className={styles.cartContainer}>
-              <div className={styles.cartItem}>
-                <img className={styles.image} src="/product_1.png" alt="" />
-              </div>
-              <div className={styles.cartItemTwo}>
-                <p>SU PU ERH</p>
-                <p>Weight: 100g</p>
-                <button>Remove</button>
-              </div>
-              <div className={styles.cartItemThree}>
-                <div className={styles.qty}>
-                  <button
-                    onClick={() => decrementCount()}
-                    className={styles.qtyButton}
-                  >
-                    -
-                  </button>
-                  <span className={styles.count}>{count}</span>
-                  <button
-                    onClick={() => incrementCount()}
-                    className={styles.qtyButton}
-                  >
-                    +
-                  </button>
-                  <p>$ 17</p>
+            {cartItems.map((item) => (
+              <div key={item.id} className={styles.cartContainer}>
+                <div className={styles.cartItem}>
+                  <img className={styles.image} src={item.url} alt="" />
+                </div>
+                <div className={styles.cartItemTwo}>
+                  <p>{item.name}</p>
+                  <p>Weight: 100g</p>
+                  <button>Remove</button>
+                </div>
+                <div className={styles.cartItemThree}>
+                  <div className={styles.qty}>
+                    <button
+                      onClick={() => decrementCount()}
+                      className={styles.qtyButton}
+                    >
+                      -
+                    </button>
+                    <span className={styles.count}>{count}</span>
+                    <button
+                      onClick={() => incrementCount()}
+                      className={styles.qtyButton}
+                    >
+                      +
+                    </button>
+                    <p>$ {item.price}</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
+
             <button className={styles.checkout}>CONTINUE TO CHECKOUT</button>
           </>
         )}
