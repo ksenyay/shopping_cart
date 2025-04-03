@@ -3,7 +3,7 @@ import styles from "./Cart.module.css";
 import { ShopContext } from "../App";
 
 function Cart() {
-  const { cartItems } = useContext(ShopContext);
+  const { cartItems, removeFromCart } = useContext(ShopContext);
 
   const [count, setCount] = useState(1);
 
@@ -34,7 +34,7 @@ function Cart() {
                 <div className={styles.cartItemTwo}>
                   <p>{item.name}</p>
                   <p>Weight: 100g</p>
-                  <button>Remove</button>
+                  <button onClick={() => removeFromCart(item)}>Remove</button>
                 </div>
                 <div className={styles.cartItemThree}>
                   <div className={styles.qty}>
@@ -44,19 +44,21 @@ function Cart() {
                     >
                       -
                     </button>
-                    <span className={styles.count}>{count}</span>
+                    <span className={styles.count}>{item.quantity}</span>
                     <button
                       onClick={() => incrementCount()}
                       className={styles.qtyButton}
                     >
                       +
                     </button>
-                    <p>$ {item.price}</p>
+                    <p>$ {item.price * item.quantity}</p>
                   </div>
                 </div>
               </div>
             ))}
-
+            <p className={styles.total}>
+              <b>Total:</b>
+            </p>
             <button className={styles.checkout}>CONTINUE TO CHECKOUT</button>
           </>
         )}

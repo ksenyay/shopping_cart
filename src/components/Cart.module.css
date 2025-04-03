@@ -90,7 +90,7 @@
   cursor: pointer;
   color: var(--secondary-font);
   font-weight: 500;
-  margin-top: 10px;
+  margin-top: 5px;
   border: 1px solid var(--secondary-font);
   background-color: rgb(246, 246, 246);
   transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
@@ -124,4 +124,11 @@
 .count {
   font-size: 1.3em;
   padding: 0 10px;
+}
+
+.total {
+  font-size: 1.5em;
+  text-align: start;
+  margin: 0;
+  margin-left: 3px;
 }

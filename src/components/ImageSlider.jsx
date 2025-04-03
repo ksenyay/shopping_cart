@@ -19,7 +19,6 @@ function ImageSilder({ slides }) {
     return () => clearInterval(interval);
   }, [slides.length]);
 
-  console.log(slides);
   return <img style={styles} src={slides[currentIndex].url} alt="" />;
 }
 

@@ -7,6 +7,7 @@ import { createContext, useState } from "react";
 export const ShopContext = createContext({
   products: [],
   cartItems: [],
+  removeFromCart: () => {},
   addToCart: () => {},
 });
 
@@ -97,12 +98,30 @@ function App() {
     },
   ];
 
-  const addToCart = (product) => {
-    setCartItems((prevProduct) => [...prevProduct, product]);
+  const addToCart = (product, count = 1) => {
+    setCartItems((prevCart) => {
+      const currentProduct = prevCart.find((item) => item.id === product.id);
+
+      if (currentProduct) {
+        return prevCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + count }
+            : item
+        );
+      } else {
+        return [...prevCart, { ...product, quantity: count }];
+      }
+    });
+  };
+  const removeFromCart = (product) => {
+    const updatedCart = cartItems.filter((item) => item.id !== product.id); // Fix here
+    setCartItems(updatedCart);
   };
 
   return (
-    <ShopContext.Provider value={{ products, cartItems, addToCart }}>
+    <ShopContext.Provider
+      value={{ products, cartItems, addToCart, removeFromCart }}
+    >
       <Nav />
       <Outlet />
     </ShopContext.Provider>
