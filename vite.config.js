@@ -2,9 +2,8 @@ import react from "@vitejs/plugin-react";
 
 export default {
   plugins: [react()],
-  base: "/shopping_cart/",
+  base: "/",
   build: {
     outDir: "dist",
-    assetsDir: "assets",
   },
 };
