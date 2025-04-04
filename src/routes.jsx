@@ -9,7 +9,7 @@ import NotFoundPage from "./components/NotFoundPage";
 
 const routes = [
   {
-    path: "/",
+    path: "/shopping_cart",
     element: <App />,
     errorElement: <NotFoundPage />,
     children: [
