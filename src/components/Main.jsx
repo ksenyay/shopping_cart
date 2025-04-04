@@ -21,8 +21,9 @@ function Main() {
         <h1 className={styles.h1}>RELAX WITH VARIETY OF TEAS</h1>
         <div className={styles.description}>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Repellendus odit sed doloribus quaerat deleniti
+            Discover our cozy tea shop offering premium blends from around the
+            world. Experience warmth, quality, and the perfect cup for every
+            taste.
           </p>
           <Link className={styles.span} to="products">
             SHOP NOW

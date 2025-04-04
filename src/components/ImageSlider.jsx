@@ -1,12 +1,5 @@
 import { useEffect, useState } from "react";
-
-const styles = {
-  width: "100%",
-  maxWidth: "750px",
-  height: "100%",
-  borderRadius: "50px",
-  objectFit: "cover",
-};
+import styles from "./ImageSlider.module.css";
 
 function ImageSilder({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,7 +12,7 @@ function ImageSilder({ slides }) {
     return () => clearInterval(interval);
   }, [slides.length]);
 
-  return <img style={styles} src={slides[currentIndex].url} alt="" />;
+  return <img className={styles.img} src={slides[currentIndex].url} alt="" />;
 }
 
 export default ImageSilder;
