@@ -26,12 +26,12 @@ function Nav() {
     <div className={styles.nav}>
       <ul className={styles.list}>
         <li>
-          <Link className={styles.logo} to="/shopping_cart">
+          <Link className={styles.logo} to="/">
             THE TEA
           </Link>
         </li>
         <li>
-          <Link to="/shopping_cart">home</Link>
+          <Link to="/">home</Link>
         </li>
         <li>
           <Link to="products">shop</Link>
