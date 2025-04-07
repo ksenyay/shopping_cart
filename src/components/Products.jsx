@@ -1,16 +1,10 @@
 import Card from "./Card";
-
-const styles = {
-  fontSize: "5.5em",
-  textAlign: "start",
-  marginLeft: "10px",
-  marginTop: "50px",
-};
+import styles from "./Products.module.css";
 
 function Products() {
   return (
-    <div>
-      <h1 style={styles}>PRODUCTS</h1>
+    <div className={styles.container}>
+      <h1 className={styles.heading}>PRODUCTS</h1>
       <Card />
     </div>
   );

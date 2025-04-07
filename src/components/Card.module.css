@@ -80,3 +80,21 @@
   transform: scale(1.05);
   border: 1px solid var(--blue-accent);
 }
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 350px;
+    max-height: fit-content;
+    margin-bottom: 5px;
+  }
+  .cardContainer {
+    max-width: 400px;
+    gap: 30px;
+    overflow: visible;
+  }
+
+  .img {
+    max-width: 350px;
+    height: 300px;
+  }
+}

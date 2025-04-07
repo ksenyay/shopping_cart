@@ -133,3 +133,40 @@
   margin: 0;
   margin-left: 3px;
 }
+
+@media (max-width: 480px) {
+  .cart {
+    margin-top: 70px;
+    max-width: 480px;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .cart h2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .cart .cartItemTwo {
+    padding: 10px 0 0 15px;
+  }
+  .cart .cartItemTwo p:first-child {
+    font-size: 1.1em;
+  }
+  .cart .cartItemTwo p:nth-child(2) {
+    font-size: 1em;
+  }
+
+  .qty {
+    padding: 10px 0;
+  }
+
+  .count {
+    font-size: 1.1em;
+  }
+
+  .cartItemThree p {
+    font-size: 1.5em;
+  }
+}
