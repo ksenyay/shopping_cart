@@ -86,10 +86,14 @@
   .span {
     font-size: 1em;
     border: 1px solid var(--secondary-font);
-    padding: 0 10px 10px 20px;
+    padding: 15px 20px;
     font-weight: 500;
     border-radius: 25px;
     vertical-align: center;
     margin-top: 10px;
+  }
+
+  .span::after {
+    content: "";
   }
 }

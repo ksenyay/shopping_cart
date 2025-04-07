@@ -134,11 +134,11 @@
   margin-left: 3px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) and (max-width: 767px) {
   .cart {
     margin-top: 70px;
     max-width: 480px;
-    padding: 10px;
+    padding: 7px;
     gap: 10px;
   }
 
@@ -150,6 +150,7 @@
 
   .cart .cartItemTwo {
     padding: 10px 0 0 15px;
+    text-align: start;
   }
   .cart .cartItemTwo p:first-child {
     font-size: 1.1em;

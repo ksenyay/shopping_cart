@@ -48,7 +48,7 @@
   margin-left: 10px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) and (max-width: 767px) {
   .nav {
     position: fixed;
     top: 0;
@@ -57,7 +57,7 @@
     height: auto;
     background-color: white;
     width: 100%;
-    padding: 20px;
+    padding: 20px 10px;
     z-index: 1000;
   }
 
@@ -74,6 +74,6 @@
   }
 
   .list li:last-child {
-    padding-right: 50px;
+    padding-right: 20px;
   }
 }

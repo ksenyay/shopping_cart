@@ -81,7 +81,7 @@
   border: 1px solid var(--blue-accent);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) and (max-width: 767px) {
   .card {
     max-width: 350px;
     max-height: fit-content;
