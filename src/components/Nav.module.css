@@ -48,7 +48,7 @@
   margin-left: 10px;
 }
 
-@media (max-width: 480px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .nav {
     position: fixed;
     top: 0;
@@ -75,5 +75,13 @@
 
   .list li:last-child {
     padding-right: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav {
+    font-size: 1.3em;
+
+    width: 100%;
   }
 }
