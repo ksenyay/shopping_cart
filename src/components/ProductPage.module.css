@@ -160,12 +160,12 @@
     align-self: center;
   }
 
-  .qty button {
-    color: var(--light-grey);
-  }
-
   .count {
     font-size: 1.3em;
     color: var(--secondary-font);
+  }
+  .qtyButton {
+    padding: 0;
+    color: var(--light-grey);
   }
 }
