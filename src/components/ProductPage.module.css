@@ -3,7 +3,8 @@
   flex-direction: row;
   max-width: 1500px;
   margin: 0 auto;
-  margin-top: 50px;
+  padding: 0 50px;
+  margin-top: -25px;
   gap: 10px;
 }
 
@@ -16,7 +17,7 @@
 
 .elementContainer {
   width: 50%;
-  height: 700px;
+  max-height: 650px;
   display: flex;
 }
 
@@ -34,7 +35,7 @@
 
 .elementContainer h2 {
   font-size: 3em;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 50px;
 }
 
@@ -99,6 +100,10 @@
     padding: 0;
     margin-top: 0;
     max-width: 480px;
+  }
+
+  .elementContainer {
+    height: 750px;
   }
 
   .elementContainer:first-child {

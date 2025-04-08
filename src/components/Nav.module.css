@@ -1,7 +1,14 @@
 .nav {
-  height: 50px;
-  font-size: 1.1em;
-  margin-top: 30px;
+  height: 60px;
+  font-size: 1.2em;
+  width: 1400px;
+  padding: 5px 25px 20px 25px;
+  position: sticky;
+  top: 0;
+  left: 5;
+  background-color: white;
+  z-index: 1000;
+  margin-bottom: 60px;
 }
 
 .list {
@@ -23,7 +30,7 @@
   font-size: 2em;
   margin-left: 10px;
   position: absolute;
-  top: -26px;
+  top: -28px;
 }
 
 .list li {
@@ -75,13 +82,5 @@
 
   .list li:last-child {
     padding-right: 20px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .nav {
-    font-size: 1.3em;
-
-    width: 100%;
   }
 }

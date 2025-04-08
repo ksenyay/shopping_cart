@@ -1,12 +1,12 @@
 .cardContainer {
   display: flex;
   padding: 10px 0;
-  max-height: 600px;
+  max-height: 900px;
   flex-direction: row;
-  gap: 50px;
+  gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
-  overflow: auto;
+  overflow: visible;
   margin-bottom: 70px;
 }
 
@@ -91,6 +91,7 @@
     max-width: 400px;
     gap: 30px;
     overflow: visible;
+    padding: 0;
   }
 
   .img {
